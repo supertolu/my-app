@@ -1,0 +1,38 @@
+<!-- <div style="padding: 20px; border: 1px solid #ddd; margin-top: 15px;">
+<h2>Availble Items</h2>
+<p>Items in Cart:<strong>{{cartCount}}</strong></p>
+
+<div style="display: flex; gap: 15px; flex-direction:  column; margin-top: 15px;">
+@for (product of products; track product.id) {
+<div style="border: 1px solid#eee; padding: 15px; border-radius: 5px;"
+[style.opacity]="product.inStock ? '1' : '0.5'">
+
+<h3>{{ product.name}}</h3>
+<p>Price: ${{product.price}}</p>
+
+@if (product.inStock) {
+<button (click)="addToCart()" style="background: #007bff; color: white; padding: 8px 12px; border: none; cursor: pointer;">
+Add to  Cart
+</button>
+} @else {
+    <span style="color: red; font-weight: bold;">Temporarily Out of Stock</span>
+}
+</div> -->
+<!-- } -->
+<!--  
+</div> --><div style="padding: 20px; border: 1px solid #ddd; margin-top: 15px;">
+  <h2>Available Items</h2>
+  
+  @for (product of products; track product.id) {
+    <app-product-card [productData]="product"></app-product-card>
+  }
+</div>
+<!-- </div> -->
+
+<div style="padding: 20px; border: 1px solid #ddd; margin-top: 15px;">
+  <h2>Available Items</h2>
+  
+  @for (product of products; track product.id) {
+    <app-product-card [productData]="product"></app-product-card>
+  }
+</div>
